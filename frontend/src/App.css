@@ -1,0 +1,111 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #18191c;
+}
+#root {
+  /* Remove text-align and padding for centering fix */
+}
+
+
+.calc-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #18191c;
+  z-index: 0;
+}
+
+.calc-container {
+  background: #23242a;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px 0 #0006;
+  padding: 2rem 1rem 1.5rem 1rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc-display-container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.calc-display {
+  background: #111216;
+  color: #fff;
+  border-radius: 0.75rem;
+  font-size: 2rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  text-align: right;
+  padding: 1rem;
+  min-height: 3.2rem;
+  box-shadow: 0 2px 8px 0 #0003 inset;
+  user-select: none;
+  overflow-x: auto;
+}
+.calc-result {
+  text-align: right;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  color: #43e97b;
+  height: 1.5rem;
+  padding-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.calc-btn {
+  height: 3rem;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: #26272d;
+  color: #fff;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 4px #0002;
+  outline: none;
+}
+.calc-btn:active {
+  background: #33344a;
+}
+.calc-digit {
+  background: #2d2e36;
+}
+.calc-operator {
+  background: #3b5fff;
+  color: #fff;
+}
+.calc-operator:active {
+  background: #2540b0;
+}
+.calc-clear {
+  background: #ff3b6a;
+  color: #fff;
+}
+.calc-clear:active {
+  background: #b0213a;
+}
+.calc-equals {
+  background: #43e97b;
+  color: #18191c;
+  font-weight: bold;
+  font-size: 1.4rem;
+  grid-column: span 4;
+  height: 3.2rem;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+}
+.calc-equals:active {
+  background: #2cbe63;
+}
